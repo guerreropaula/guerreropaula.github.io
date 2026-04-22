@@ -1,2 +1,2 @@
 # guerreropaula.github.io
-Personal web page Paula Guerrero.
+Source code for my personal website and portfolio → https://guerreropaula.github.io/
