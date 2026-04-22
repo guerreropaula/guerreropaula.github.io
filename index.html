@@ -6,19 +6,15 @@
   <title>Paula Guerrero Castelló — NLP Engineer & Computational Linguist</title>
   <meta name="description" content="Personal website of Paula Guerrero Castelló — NLP researcher, computational linguist, and machine translation specialist based in Alicante, Spain." />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <!-- Google Fonts: DM Serif Display + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ░░ SCANLINE OVERLAY ░░ -->
   <div class="scanlines" aria-hidden="true"></div>
 
-  <!-- ░░ NAVIGATION ░░ -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__logo">
       <span class="nav__logo-bracket">[</span>
@@ -38,16 +34,12 @@
     </ul>
   </nav>
 
-  <!-- ░░ HERO ░░ -->
   <header class="hero" id="top">
     <div class="hero__container">
 
-      <!-- Left: all info -->
       <div class="hero__info">
-        <!-- desktop: nombre y título visibles directamente -->
         <h1 class="hero__name">Paula Guerrero Castelló</h1>
         <p class="hero__title">NLP Engineer &amp; Computational Linguist</p>
-        <!-- mobile only: foto pequeña + nombre en fila -->
         <div class="hero__top-row">
           <img src="assets/profile.jpg" alt="Paula Guerrero Castelló" class="hero__photo-mobile" onerror="this.style.display='none'" />
           <div class="hero__name-block">
@@ -81,7 +73,6 @@
         </div>
       </div>
 
-      <!-- Right: photo -->
       <div class="hero__photo-wrap">
         <img src="assets/profile.jpg" alt="Paula Guerrero Castelló" class="hero__photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
         <div class="hero__photo-placeholder" aria-label="Profile photo" style="display:none">
@@ -95,7 +86,6 @@
 
   <main>
 
-    <!-- ░░ ABOUT ░░ -->
     <section class="section" id="about">
       <div class="container">
         <h2 class="section__title"><span class="section__num">01.</span> About</h2>
@@ -112,13 +102,11 @@
       </div>
     </section>
 
-    <!-- ░░ EXPERIENCE ░░ -->
     <section class="section section--alt" id="experience">
       <div class="container">
         <h2 class="section__title"><span class="section__num">02.</span> Experience</h2>
         <div class="timeline">
 
-          <!-- Job 1 -->
           <article class="timeline__item">
             <div class="timeline__marker"></div>
             <div class="timeline__body">
@@ -137,7 +125,6 @@
             </div>
           </article>
 
-          <!-- Job 2 -->
           <article class="timeline__item">
             <div class="timeline__marker"></div>
             <div class="timeline__body">
@@ -157,7 +144,6 @@
       </div>
     </section>
 
-    <!-- ░░ EDUCATION ░░ -->
     <section class="section" id="education">
       <div class="container">
         <h2 class="section__title"><span class="section__num">03.</span> Education</h2>
@@ -217,12 +203,10 @@
       </div>
     </section>
 
-    <!-- ░░ PROJECTS ░░ -->
     <section class="section section--alt" id="projects">
       <div class="container">
         <h2 class="section__title"><span class="section__num">04.</span> Projects</h2>
 
-        <!-- Featured project -->
         <article class="project project--featured">
           <div class="project__label">📄 EAMT 2026 Submission</div>
           <h3 class="project__title">Enhancing LLM Translation Performance for Spanish–Valencian through SFT and Reinforcement Learning</h3>
@@ -244,7 +228,6 @@
 
         <div class="projects-grid">
 
-          <!-- Project 2 -->
           <article class="project-card">
             <h3>Clinical Text Simplification with Fine-Tuned LLMs</h3>
             <p class="project__meta">Feb 2026 – Present</p>
@@ -260,7 +243,6 @@
             </div>
           </article>
 
-          <!-- Project 3 -->
           <article class="project-card">
             <h3>MaCoCu Corpus Validation</h3>
             <p class="project__meta">Prompsit Language Engineering · 2025</p>
@@ -279,7 +261,6 @@
       </div>
     </section>
 
-    <!-- ░░ SKILLS ░░ -->
     <section class="section" id="skills">
       <div class="container">
         <h2 class="section__title"><span class="section__num">05.</span> Skills</h2>
@@ -290,7 +271,7 @@
             <ul class="skills-list">
               <li>PyTorch &amp; Transformer Architectures</li>
               <li>LLM Fine-Tuning (SFT, GRPO/RL, LoRA)</li>
-              <li>Machine Translation (Seq2Seq, Neural MT)</li>
+              <li>Machine Translation (Seq2Seq, Neural MT, LLMs)</li>
               <li>Text Classification &amp; Sequence Labeling</li>
               <li>Named Entity Recognition (NER)</li>
               <li>Text Summarization &amp; Question Answering</li>
@@ -339,7 +320,6 @@
       </div>
     </section>
 
-    <!-- ░░ CONTACT ░░ -->
     <section class="section section--alt" id="contact">
       <div class="container">
         <h2 class="section__title"><span class="section__num">06.</span> Contact</h2>
@@ -367,7 +347,6 @@
 
   </main>
 
-  <!-- ░░ FOOTER ░░ -->
   <footer class="footer">
     <div class="container">
       <p>
@@ -379,7 +358,6 @@
     </div>
   </footer>
 
-  <!-- ░░ LIVING MAP MODAL ░░ -->
   <div id="living-map-modal" class="lmap-overlay" style="display:none" aria-modal="true" role="dialog" aria-label="Places I have lived">
     <div class="lmap-panel" onclick="event.stopPropagation()">
       <button class="lmap-close" onclick="closeLivingMap()" aria-label="Close map">✕</button>
@@ -388,11 +366,9 @@
     </div>
   </div>
 
-  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
-    /* ── Mobile nav toggle ── */
     const toggle = document.querySelector('.nav__toggle');
     const navLinks = document.querySelector('.nav__links');
     toggle.addEventListener('click', () => {
@@ -401,7 +377,6 @@
       navLinks.classList.toggle('is-open');
     });
 
-    /* ── Close nav on link click (mobile) ── */
     document.querySelectorAll('.nav__links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('is-open');
@@ -409,7 +384,6 @@
       });
     });
 
-    /* ── Active nav link on scroll ── */
     const sections = document.querySelectorAll('section[id], header[id]');
     const navAnchors = document.querySelectorAll('.nav__links a');
     const observer = new IntersectionObserver(entries => {
@@ -423,7 +397,6 @@
     }, { threshold: 0.4 });
     sections.forEach(s => observer.observe(s));
 
-    /* ── Scroll-reveal animation ── */
     const revealObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -437,7 +410,6 @@
       revealObserver.observe(el);
     });
 
-    /* ── Living map modal ── */
     var livingMap = null;
 
     document.getElementById('alicante-tag').addEventListener('click', function() {
