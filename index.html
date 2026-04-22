@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paula Guerrero Castelló — NLP Engineer & Computational Linguist</title>
+  <meta name="description" content="Personal website of Paula Guerrero Castelló — NLP researcher, computational linguist, and machine translation specialist based in Alicante, Spain." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Google Fonts: DM Serif Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ░░ SCANLINE OVERLAY ░░ -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__logo">
+      <span class="nav__logo-bracket">[</span>
+      <span class="nav__logo-text">PGC</span>
+      <span class="nav__logo-bracket">]</span>
+    </div>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <header class="hero" id="top">
+    <div class="hero__container">
+
+      <!-- Left: all info -->
+      <div class="hero__info">
+        <!-- desktop: nombre y título visibles directamente -->
+        <h1 class="hero__name">Paula Guerrero Castelló</h1>
+        <p class="hero__title">NLP Engineer &amp; Computational Linguist</p>
+        <!-- mobile only: foto pequeña + nombre en fila -->
+        <div class="hero__top-row">
+          <img src="assets/profile.jpg" alt="Paula Guerrero Castelló" class="hero__photo-mobile" onerror="this.style.display='none'" />
+          <div class="hero__name-block">
+            <h1 class="hero__name">Paula Guerrero Castelló</h1>
+            <p class="hero__title">NLP Engineer &amp; Computational Linguist</p>
+          </div>
+        </div>
+        <p class="hero__tagline">Bridging the gap between translation and NLP.<br /><em>Vers une traduction automatique plus sensible au langage.</em></p>
+        <p class="hero__location">
+          <span id="alicante-tag" class="tag tag--clickable" title="See places I've lived">📍 Alicante, Spain</span>
+          <a class="tag tag--link" href="https://www.ehu.eus/es/web/master/master-analisis-procesamiento-lenguaje" target="_blank" rel="noopener" title="MSc programme info">🎓 MSc NLP @ UPV/EHU</a>
+          <span class="tag">🔬 Machine Translation</span>
+        </p>
+        <div class="hero__social">
+          <a href="mailto:guerrerocastellopaula@gmail.com" class="hero__social-link" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            guerrerocastellopaula@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/paula-guerrero-castell%C3%B3-25ab11258" class="hero__social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/guerreropaula" class="hero__social-link" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            GitHub
+          </a>
+        </div>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="assets/files/cvPaulaGuerrero2026.pdf" class="btn btn--outline" download>Download CV</a>
+        </div>
+      </div>
+
+      <!-- Right: photo -->
+      <div class="hero__photo-wrap">
+        <img src="assets/profile.jpg" alt="Paula Guerrero Castelló" class="hero__photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <div class="hero__photo-placeholder" aria-label="Profile photo" style="display:none">
+          <span>NLP &amp; Translation</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="hero__grid" aria-hidden="true"></div>
+  </header>
+
+  <main>
+
+    <!-- ░░ ABOUT ░░ -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">01.</span> About</h2>
+        <div class="about__content">
+          <p>
+            I'm a Spanish-born NLP researcher and computational linguist with a rare double background: a degree in Translation &amp; Interpreting (English, French, Spanish, Chinese) combined with advanced training in deep learning and natural language processing. Currently pursuing my Master's in Natural Language Analysis and Processing at the University of the Basque Country (UPV/EHU), I focus on low-resource machine translation, LLM fine-tuning, and multilingual corpora.
+          </p>
+          <p>
+            My work sits at the intersection of linguistics and AI — I'm passionate about bringing underrepresented languages into modern NLP systems, with a particular focus on Valencian and other regional varieties. I also care about making AI accessible: my clinical text simplification project aims to bridge the gap between medical jargon and patient understanding.
+          </p>
+          <p>
+            Outside the lab, I've lived and studied in Brussels (Erasmus), worked at a water park in New York State, and competed in dual-qualification French–Spanish high school exams with near-perfect marks. Multilingualism is not just my field — it's my life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ EXPERIENCE ░░ -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">02.</span> Experience</h2>
+        <div class="timeline">
+
+          <!-- Job 1 -->
+          <article class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__body">
+              <div class="timeline__header">
+                <h3>NLP Intern</h3>
+                <span class="timeline__company">Prompsit Language Engineering</span>
+                <span class="timeline__date">Feb 2025 – Jun 2025 · Elche, Spain</span>
+              </div>
+              <ul class="timeline__bullets">
+                <li>Evaluated and curated multilingual corpora for AI training and machine translation quality assessment.</li>
+                <li>Developed Machine Translation systems using Seq2Seq architectures with Python.</li>
+                <li>Contributed to the EU-funded <strong>MaCoCu project</strong>, promoting under-resourced languages through corpus annotation on the Keops platform.</li>
+                <li>Identified and categorized errors in multilingual corpora; collaborated on annotation guidelines.</li>
+                <li>Evaluated <strong>MUTNMT</strong> and <strong>PROMUT</strong> MT training applications.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Job 2 -->
+          <article class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__body">
+              <div class="timeline__header">
+                <h3>Aquatics Team Member</h3>
+                <span class="timeline__company">Six Flags Darien Lake</span>
+                <span class="timeline__date">Jun 2025 – Aug 2025 · Darien Center, NY, USA</span>
+              </div>
+              <ul class="timeline__bullets">
+                <li>International work-and-travel experience in a high-traffic, multilingual environment.</li>
+                <li>Developed cross-cultural communication and teamwork skills.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ EDUCATION ░░ -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">03.</span> Education</h2>
+        <div class="edu-grid">
+
+          <article class="edu-card">
+            <div class="edu-card__badge">MSc</div>
+            <div class="edu-card__body">
+              <h3>Natural Language Analysis and Processing</h3>
+              <p class="edu-card__uni">University of the Basque Country (UPV/EHU)</p>
+              <p class="edu-card__date">Oct 2025 – Feb 2027 · Alicante, Spain</p>
+              <p class="edu-card__desc">Deep learning &amp; transformer architectures (PyTorch), NLP model design, MT system building, corpus creation. Focus on low-resource language processing.</p>
+            </div>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-card__badge">BSc</div>
+            <div class="edu-card__body">
+              <h3>Translation and Interpreting</h3>
+              <p class="edu-card__uni">University of Alicante</p>
+              <p class="edu-card__date">Sep 2021 – Jun 2025 · Alicante, Spain</p>
+              <p class="edu-card__desc">English, French, Spanish and Chinese. Final GPA: <strong>8.85/10</strong>. Thesis: <em>Video Game Localization Through a Gender Lens</em>.</p>
+            </div>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-card__badge">↗</div>
+            <div class="edu-card__body">
+              <h3>Erasmus Exchange — Translation &amp; Interpreting</h3>
+              <p class="edu-card__uni">Université Saint-Louis, Brussels</p>
+              <p class="edu-card__date">Sep 2023 – Feb 2024 · Brussels, Belgium</p>
+              <p class="edu-card__desc">Immersive multilingual academic experience at a leading Belgian university.</p>
+            </div>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-card__badge">⌨</div>
+            <div class="edu-card__body">
+              <h3>Corpus Processing &amp; Programming for Computational Linguists</h3>
+              <p class="edu-card__uni">Self-taught — Francis Tyers (Indiana University)</p>
+              <p class="edu-card__date">Self-paced</p>
+              <p class="edu-card__desc">Python &amp; Unix for corpus processing and computational linguistics.</p>
+            </div>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-card__badge">★</div>
+            <div class="edu-card__body">
+              <h3>BachiBac — Baccalauréat &amp; Bachillerato</h3>
+              <p class="edu-card__uni">IES Carrús, Elche</p>
+              <p class="edu-card__date">Sep 2019 – Jun 2021 · Elche, Spain</p>
+              <p class="edu-card__desc">Dual French–Spanish qualification. Graduated with highest honours: <strong>9.98/10</strong>.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ PROJECTS ░░ -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">04.</span> Projects</h2>
+
+        <!-- Featured project -->
+        <article class="project project--featured">
+          <div class="project__label">📄 EAMT 2026 Submission</div>
+          <h3 class="project__title">Enhancing LLM Translation Performance for Spanish–Valencian through SFT and Reinforcement Learning</h3>
+          <p class="project__meta">University of the Basque Country · Feb 2026 – Present</p>
+          <p class="project__desc">
+            Fine-tuned <strong>TranslateGemma-4B</strong> using Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO) to improve translation quality for the low-resource Spanish→Valencian direction. Designed custom reward functions and an end-to-end evaluation pipeline. Results: <span class="highlight">+22.9 BLEU</span> and <span class="highlight">+15.7 chrF</span> over baseline; Valencian-specific dialect forms grew from 3.2% to 41.0%, approximating professional human translation quality.
+          </p>
+          <div class="project__links">
+            <a href="https://github.com/guerreropaula/Reinforcement-Learning-ES-VA-TranslateGemma" class="project__link" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+          <div class="project__tags">
+            <span class="pill">LLM Fine-Tuning</span>
+            <span class="pill">GRPO / RL</span>
+            <span class="pill">Machine Translation</span>
+            <span class="pill">Low-Resource NLP</span>
+            <span class="pill">Valencian</span>
+          </div>
+        </article>
+
+        <div class="projects-grid">
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <h3>Clinical Text Simplification with Fine-Tuned LLMs</h3>
+            <p class="project__meta">Feb 2026 – Present</p>
+            <p>Fine-tuned <strong>Qwen3.5-0.8B</strong> and <strong>Llama-3.2-1B</strong> with LoRA on the CLARA-MeD clinical corpus for automatic medical text simplification in Spanish. Achieved results comparable to human simplifications in meaning preservation. Deployed interactive demos on Hugging Face.</p>
+            <div class="project__links">
+              <a href="https://github.com/pguerrero-igutierrez/clinical-simplification" class="project__link" target="_blank" rel="noopener">GitHub →</a>
+              <a href="https://huggingface.co/guerreropaula" class="project__link" target="_blank" rel="noopener">HuggingFace →</a>
+            </div>
+            <div class="project__tags">
+              <span class="pill">LoRA</span>
+              <span class="pill">Text Simplification</span>
+              <span class="pill">Healthcare NLP</span>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <h3>MaCoCu Corpus Validation</h3>
+            <p class="project__meta">Prompsit Language Engineering · 2025</p>
+            <p>Performed detailed validation of corpus segments for the EU-funded MaCoCu project. Created annotation guidelines for bilingual corpora; resolved segmentation, coherence, and cross-lingual alignment issues using the Keops platform.</p>
+            <div class="project__links">
+              <a href="https://github.com/paracrawl/keops/blob/master/evaluators.md#validation-MaCoCu" class="project__link" target="_blank" rel="noopener">Documentation →</a>
+            </div>
+            <div class="project__tags">
+              <span class="pill">Corpus Annotation</span>
+              <span class="pill">EU Project</span>
+              <span class="pill">Under-resourced Languages</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SKILLS ░░ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">05.</span> Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skills-group">
+            <h3 class="skills-group__title">NLP &amp; AI</h3>
+            <ul class="skills-list">
+              <li>PyTorch &amp; Transformer Architectures</li>
+              <li>LLM Fine-Tuning (SFT, GRPO/RL, LoRA)</li>
+              <li>Machine Translation (Seq2Seq, Neural MT)</li>
+              <li>Text Classification &amp; Sequence Labeling</li>
+              <li>Named Entity Recognition (NER)</li>
+              <li>Text Summarization &amp; Question Answering</li>
+              <li>Hugging Face Ecosystem</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-group__title">Programming &amp; Tools</h3>
+            <ul class="skills-list">
+              <li>Python (advanced)</li>
+              <li>Scikit-Learn, NumPy, Pandas</li>
+              <li>Corpus Processing &amp; UNIX</li>
+              <li>LaTeX</li>
+              <li>CAT Tools (SDL Trados, MemoQ)</li>
+              <li>Subtitling Software (Aegisub, Subtitle Edit)</li>
+              <li>Microsoft Office Suite</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-group__title">Languages</h3>
+            <ul class="skills-list">
+              <li><strong>Spanish</strong> — Native</li>
+              <li><strong>Catalan/Valencian</strong> — Native</li>
+              <li><strong>English</strong> — C1/C2 Proficient</li>
+              <li><strong>French</strong> — C1/C2 Proficient</li>
+              <li><strong>Chinese (Mandarin)</strong> — B1 Independent</li>
+              <li><strong>German</strong> — A2 Basic</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-group__title">Research &amp; Linguistics</h3>
+            <ul class="skills-list">
+              <li>Corpus Creation &amp; Curation</li>
+              <li>Corpus Annotation &amp; Quality Assessment</li>
+              <li>Computational Linguistics</li>
+              <li>Translation Studies</li>
+              <li>Low-Resource Language Processing</li>
+              <li>Localization &amp; Gender Studies in Translation</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CONTACT ░░ -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">06.</span> Contact</h2>
+        <p class="contact__intro">I'm open to research collaborations, NLP projects, and opportunities in computational linguistics and machine translation. Feel free to reach out.</p>
+        <div class="contact__links">
+          <a href="mailto:guerrerocastellopaula@gmail.com" class="contact__item">
+            <span class="contact__icon">✉</span>
+            <span>guerrerocastellopaula@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/paula-guerrero-castelló-25ab11258" class="contact__item" target="_blank" rel="noopener">
+            <span class="contact__icon">in</span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/guerreropaula" class="contact__item" target="_blank" rel="noopener">
+            <span class="contact__icon">⌥</span>
+            <span>GitHub</span>
+          </a>
+          <a href="https://huggingface.co/guerreropaula" class="contact__item" target="_blank" rel="noopener">
+            <span class="contact__icon">🤗</span>
+            <span>Hugging Face</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <span class="footer__bracket">[</span>
+        Paula Guerrero Castelló &nbsp;·&nbsp; Alicante, Spain &nbsp;·&nbsp; 2026
+        <span class="footer__bracket">]</span>
+      </p>
+      <p class="footer__sub">Built with HTML &amp; CSS · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- ░░ LIVING MAP MODAL ░░ -->
+  <div id="living-map-modal" class="lmap-overlay" style="display:none" aria-modal="true" role="dialog" aria-label="Places I have lived">
+    <div class="lmap-panel" onclick="event.stopPropagation()">
+      <button class="lmap-close" onclick="closeLivingMap()" aria-label="Close map">✕</button>
+      <p class="lmap-title">📍 Places I've called home</p>
+      <div id="living-map"></div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    /* ── Mobile nav toggle ── */
+    const toggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('is-open');
+    });
+
+    /* ── Close nav on link click (mobile) ── */
+    document.querySelectorAll('.nav__links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* ── Active nav link on scroll ── */
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navAnchors = document.querySelectorAll('.nav__links a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navAnchors.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.nav__links a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+
+    /* ── Scroll-reveal animation ── */
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.timeline__item, .edu-card, .project-card, .project--featured, .skills-group').forEach(el => {
+      el.classList.add('reveal');
+      revealObserver.observe(el);
+    });
+
+    /* ── Living map modal ── */
+    var livingMap = null;
+
+    document.getElementById('alicante-tag').addEventListener('click', function() {
+      openLivingMap();
+    });
+
+    document.getElementById('living-map-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeLivingMap();
+    });
+
+    document.querySelector('.lmap-close').addEventListener('click', function() {
+      closeLivingMap();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLivingMap();
+    });
+
+    function openLivingMap() {
+      var modal = document.getElementById('living-map-modal');
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+
+      if (!livingMap) {
+        setTimeout(function() {
+          livingMap = L.map('living-map').setView([48.0, 5.0], 3);
+          L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          }).addTo(livingMap);
+
+          var lived = [
+            { loc: [50.85, 4.35],   label: "Brussels, Belgium",        note: "Erasmus exchange · 2023–2024" },
+            { loc: [42.90, -78.87], label: "Buffalo, New York",         note: "Six Flags Darien Lake · Summer 2025" },
+            { loc: [43.32, -1.98],  label: "Donosti (San Sebastián)",   note: "MSc NLP @ UPV/EHU · 2025–2027" },
+            { loc: [38.28, -0.59],  label: "Alicante–Elche",            note: "Home · BSc Translation & Interpreting" }
+          ];
+
+          function pinIcon() {
+            return L.divIcon({
+              className: '',
+              html: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="34" viewBox="0 0 26 34"><path d="M13 0C5.82 0 0 5.82 0 13c0 8.95 13 21 13 21S26 21.95 26 13C26 5.82 20.18 0 13 0z" fill="#4ade80"/><circle cx="13" cy="13" r="5.5" fill="white"/></svg>',
+              iconSize: [26, 34],
+              iconAnchor: [13, 34],
+              popupAnchor: [0, -36]
+            });
+          }
+
+          var bounds = [];
+          lived.forEach(function(p) {
+            L.marker(p.loc, { icon: pinIcon() }).addTo(livingMap)
+              .bindPopup('<b>' + p.label + '</b><br><span style="color:#999;font-size:.82em">' + p.note + '</span>');
+            bounds.push(p.loc);
+          });
+
+          livingMap.fitBounds(bounds, { padding: [40, 40] });
+        }, 100);
+      } else {
+        setTimeout(function() { livingMap.invalidateSize(); }, 100);
+      }
+    }
+
+    function closeLivingMap() {
+      document.getElementById('living-map-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>
