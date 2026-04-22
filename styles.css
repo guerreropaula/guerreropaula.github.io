@@ -1,13 +1,9 @@
 /* ============================================================
-   Paula Guerrero Castelló — Personal Website
-   Aesthetic: Professional Dark — Charcoal + Sage Green
-   Fonts: DM Serif Display (headings) + DM Sans (body)
+   Paula Guerrero Castelló — Personal Website Style
    ============================================================ */
 
-/* ── Google Fonts import ── */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
 
-/* ── CSS Custom Properties ── */
 :root {
   --green:         #4ade80;
   --green-dim:     #22c55e;
@@ -36,7 +32,6 @@
   --t: 0.22s ease;
 }
 
-/* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 17.5px; }
 body {
@@ -58,12 +53,10 @@ a:hover { color: var(--white); }
 ul { list-style: none; }
 strong { color: var(--white); font-weight: 500; }
 
-/* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: rgba(74,222,128,.25); border-radius: 2px; }
 
-/* ── Container ── */
 .container {
   max-width: 1080px;
   margin: 0 auto;
@@ -72,9 +65,7 @@ strong { color: var(--white); font-weight: 500; }
 
 .scanlines { display: none; }
 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
+
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -145,9 +136,7 @@ strong { color: var(--white); font-weight: 500; }
   transition: transform var(--t), opacity var(--t);
 }
 
-/* ============================================================
-   HERO
-   ============================================================ */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -232,7 +221,6 @@ strong { color: var(--white); font-weight: 500; }
   box-shadow: 0 12px 48px rgba(0,0,0,.6);
 }
 
-/* mobile-only top row — hidden on desktop */
 .hero__top-row { display: none; }
 .hero__photo-mobile { display: none; }
 
@@ -327,7 +315,6 @@ strong { color: var(--white); font-weight: 500; }
   color: var(--white);
 }
 
-/* ── Hero Social Links ── */
 .hero__social {
   display: flex;
   flex-wrap: wrap;
@@ -355,9 +342,7 @@ strong { color: var(--white); font-weight: 500; }
 .hero__social-link:hover { color: var(--white); }
 .hero__social-link:hover svg { color: var(--white); }
 
-/* ============================================================
-   SECTIONS
-   ============================================================ */
+
 .section {
   padding: 6rem 0;
 }
@@ -393,7 +378,6 @@ strong { color: var(--white); font-weight: 500; }
   letter-spacing: 0.05em;
 }
 
-/* ── About ── */
 .about__content p {
   margin-bottom: 1.25rem;
   font-size: 0.95rem;
@@ -402,7 +386,6 @@ strong { color: var(--white); font-weight: 500; }
 }
 .about__content p:last-child { margin-bottom: 0; }
 
-/* ── Timeline ── */
 .timeline {
   position: relative;
   padding-left: 2rem;
@@ -469,7 +452,6 @@ strong { color: var(--white); font-weight: 500; }
 }
 .timeline__bullets li::marker { color: var(--green); }
 
-/* ── Education ── */
 .edu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -530,7 +512,6 @@ strong { color: var(--white); font-weight: 500; }
   line-height: 1.6;
 }
 
-/* ── Projects ── */
 .project--featured {
   background: var(--bg-card);
   border: 1px solid rgba(74,222,128,.2);
@@ -635,7 +616,6 @@ strong { color: var(--white); font-weight: 500; }
   line-height: 1.65;
 }
 
-/* ── Skills ── */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -680,9 +660,7 @@ strong { color: var(--white); font-weight: 500; }
 .skills-list li:last-child { border-bottom: none; }
 .skills-list strong { color: var(--white); font-weight: 500; }
 
-/* ============================================================
-   CONTACT
-   ============================================================ */
+
 .contact__intro {
   max-width: 600px;
   color: var(--text);
@@ -722,9 +700,6 @@ strong { color: var(--white); font-weight: 500; }
   text-align: center;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
 .footer {
   padding: 2.5rem 0;
   text-align: center;
@@ -739,9 +714,6 @@ strong { color: var(--white); font-weight: 500; }
   opacity: 0.4;
 }
 
-/* ============================================================
-   SCROLL REVEAL
-   ============================================================ */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -761,9 +733,7 @@ strong { color: var(--white); font-weight: 500; }
 .skills-grid .reveal:nth-child(3) { transition-delay: 0.14s; }
 .skills-grid .reveal:nth-child(4) { transition-delay: 0.21s; }
 
-/* ============================================================
-   TAGS — clickable / link variants
-   ============================================================ */
+
 .tag--clickable {
   cursor: pointer;
   transition: background 0.2s, color 0.2s, transform 0.15s;
@@ -785,9 +755,7 @@ strong { color: var(--white); font-weight: 500; }
   transform: translateY(-1px);
 }
 
-/* ============================================================
-   LIVING MAP MODAL
-   ============================================================ */
+
 .lmap-overlay {
   display: none;
   position: fixed;
@@ -842,11 +810,7 @@ strong { color: var(--white); font-weight: 500; }
   background: rgba(255,255,255,.08);
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 
-/* Tablet + Mobile */
 @media (max-width: 800px) {
   .nav { padding: 1rem 1.5rem; }
 
@@ -859,9 +823,8 @@ strong { color: var(--white); font-weight: 500; }
     min-height: unset;
   }
 
-  /* ocultar foto grande del desktop */
+
   .hero__photo-wrap { display: none; }
-  /* ocultar nombre/título standalone en mobile (los muestra hero__top-row) */
   .hero__info > .hero__name,
   .hero__info > .hero__title { display: none; }
   .hero__info {
@@ -873,7 +836,7 @@ strong { color: var(--white); font-weight: 500; }
     padding-right: 0;
   }
 
-  /* mostrar fila mobile: foto cuadrada + nombre */
+
   .hero__top-row {
     display: flex;
     flex-direction: row;
@@ -886,7 +849,7 @@ strong { color: var(--white); font-weight: 500; }
     flex-shrink: 0;
     width: 88px;
     height: 88px;
-    border-radius: 10px;
+    border-radius: 0;
     object-fit: cover;
     object-position: center top;
     box-shadow: 0 4px 20px rgba(0,0,0,.5);
@@ -925,7 +888,6 @@ strong { color: var(--white); font-weight: 500; }
   .timeline__marker { left: -1.5rem; }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
   .container { padding: 0 1.25rem; }
   .hero { padding: 5rem 1.25rem 3.5rem; }
